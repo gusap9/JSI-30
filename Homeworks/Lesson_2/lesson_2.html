@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <header></header>
+  <main id="target" class="target" name="target"></main>
+  <article></article>
+  <footer></footer>
+  <script>
+    /*
+       Необходимо найти и записать в переменную узел-элемент <main></main> всеми возможными способами
+ 
+       Например : 
+ 
+       const main1 = "Ваш код"
+       console.log('main1', main1);  // output: "main1" <main id="target" class="target" name="target"></main>
+ 
+       const main2 = ...
+       console.log('main2', main2);  // output: "main2" <main id="target" class="target" name="target"></main>
+ 
+       и т. д.
+ 
+       Важно : Если решаем идти по узлам с корня документа, то идем только по кратчайшему пути
+    */
+    const main1 = document.querySelector(".target")
+    const main2 = document.querySelector("#target")
+    const main3 = document.querySelector("main")
+    const main4 = document.getElementsByName("target")[0]
+    const main5 = document.getElementsByClassName("target")[0]
+    const main6 = document.getElementsByTagName("main")[0]
+    const main7 = document.getElementsByTagName("html")[0].childNodes[2].childNodes[3]
+    const main8 = document.getElementById("target")
+    const main9 = document.querySelectorAll(".target")[0]
+    const main10 = document.getElementsByTagName("header")[0].nextElementSibling
+    const main11 = document.getElementsByTagName("body")[0].children[1]
+    const main12 = document.getElementsByTagName("html")[0].children[1].children[1]
+    const main13 = document.getElementsByTagName("html")[0].children[1].childNodes[3]
+    const main14 = document.getElementsByTagName("html")[0].childNodes[2].children[1]
+    console.log('main1', main1);
+    console.log('main2', main2);
+    console.log('main3', main3);
+    console.log('main4', main4);
+    console.log('main5', main5);
+    console.log('main6', main6);
+    console.log('main7', main7);
+    console.log('main8', main8);
+    console.log('main9', main9);
+    console.log('main10', main10);
+    console.log('main11', main11);
+    console.log('main12', main12);
+    console.log('main13', main13);
+    console.log('main14', main14);
+  </script>
+</body>
+
+</html>
