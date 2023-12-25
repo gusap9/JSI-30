@@ -33,7 +33,23 @@ class Student extends User {
         this.year = year
     }
     getCourse() {
-        return `${2022 - this.year} - третий курс, так как текущий год 2022`
+        switch (new Date().getFullYear() - this.year) {
+            case 1:
+                return `${new Date().getFullYear() - this.year} - первый курс, так как текущий год ${new Date().getFullYear()}`;
+                break;
+            case 2:
+                return `${new Date().getFullYear() - this.year} - второй курс, так как текущий год ${new Date().getFullYear()}`;
+                break;
+            case 3:
+                return `${new Date().getFullYear() - this.year} - третий курс, так как текущий год ${new Date().getFullYear()}`;
+                break;
+            case 4:
+                return `${new Date().getFullYear() - this.year} - четвёртый курс, так как текущий год ${new Date().getFullYear()}`;
+                break;
+            case 5:
+                return `${new Date().getFullYear() - this.year} - пятый курс, так как текущий год ${new Date().getFullYear()}`;
+                break;
+        }
     }
 }
 
